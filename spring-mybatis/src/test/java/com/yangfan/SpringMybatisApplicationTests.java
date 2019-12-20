@@ -1,4 +1,4 @@
-package com.yangfan.springmybatis;
+package com.yangfan;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
