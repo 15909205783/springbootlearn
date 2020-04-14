@@ -16,6 +16,9 @@
     <bytecodeTargetLevel>
       <module name="demo" target="1.5" />
       <module name="spring-boot-rabbitmq" target="1.5" />
+      <module name="spring-mybatis" target="1.5" />
+      <module name="springboot" target="1.5" />
+      <module name="springboot-mqdemo" target="1.5" />
       <module name="springboot-rabbitmq" target="1.5" />
       <module name="springbootlearn" target="1.5" />
     </bytecodeTargetLevel>
