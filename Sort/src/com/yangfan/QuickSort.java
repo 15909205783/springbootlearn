@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class QuickSort {
     public static void main(String[] args) {
-        int[] a = new int[]{3,5,7,2,1,9,8,6,4};
+        int[] a = new int[]{3, 5, 7, 2, 1, 9, 8, 6, 4};
 
         System.out.println("Random Array :");
         System.out.println(Arrays.toString(a));

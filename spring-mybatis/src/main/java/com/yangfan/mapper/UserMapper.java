@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+
 @Component
 public interface UserMapper {
 
@@ -22,7 +23,6 @@ public interface UserMapper {
             @Result(property = "nick_name", column = "nick_name")
     })
     User getOne(Long id);
-
 
 
     @Insert("INSERT INTO users(userName,passWord,user_sex) VALUES(#{userName}, #{passWord}, #{userSex})")

@@ -15,6 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class UserMapperTest {
     @Autowired
     private UserMapper userMapper;
+
     @Test
     public void testInsert() throws Exception {
         userMapper.insert(new User("aa1", "a123456", UserSexEnum.MAN));
