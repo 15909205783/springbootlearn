@@ -1,4 +1,5 @@
 package com.yangfan.model;
 
-public class UserSexEnum {
+public enum UserSexEnum {
+    MAN, WOMAN
 }
