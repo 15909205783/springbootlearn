@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo" />
+        <module name="neety" />
         <module name="spring-mybatis" />
         <module name="springboot" />
         <module name="springboot-mqdemo" />
@@ -14,11 +14,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="demo" target="1.5" />
+      <module name="demo" target="1.8" />
+      <module name="neety" target="1.8" />
       <module name="spring-boot-rabbitmq" target="1.5" />
-      <module name="spring-mybatis" target="1.5" />
-      <module name="springboot" target="1.5" />
-      <module name="springboot-mqdemo" target="1.5" />
+      <module name="spring-mybatis" target="1.8" />
+      <module name="springboot" target="1.8" />
+      <module name="springboot-mqdemo" target="1.8" />
       <module name="springboot-rabbitmq" target="1.5" />
       <module name="springbootlearn" target="1.5" />
     </bytecodeTargetLevel>
