@@ -16,6 +16,7 @@
     <bytecodeTargetLevel>
       <module name="demo" target="1.8" />
       <module name="neety" target="1.8" />
+      <module name="NIODemos" target="1.8" />
       <module name="spring-boot-rabbitmq" target="1.5" />
       <module name="spring-mybatis" target="1.8" />
       <module name="springboot" target="1.8" />
