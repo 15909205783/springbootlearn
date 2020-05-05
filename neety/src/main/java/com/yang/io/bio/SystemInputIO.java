@@ -6,7 +6,9 @@ public class SystemInputIO {
     public static void main(String[] args) throws IOException {
 //        keyInAndPrintConsole();
 //        readAndWriteByteToFile();
-        readAndWriteCharToFile();
+//        readAndWriteCharToFile();
+//        piped();
+        dataInputStream();
     }
 
     public static void keyInAndPrintConsole() throws IOException {
@@ -79,5 +81,57 @@ public class SystemInputIO {
             reader.close();
             writer.close();
         }
+    }
+
+    public static void piped() throws IOException {
+        final PipedOutputStream output = new PipedOutputStream();
+        final PipedInputStream input = new PipedInputStream(output);
+        Thread thread1 = new Thread(() -> {
+            try {
+                output.write("Hello world, piped!".getBytes());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        Thread thread2 = new Thread(() -> {
+            try {
+                int data = input.read();
+                while (data != -1) {
+                    System.out.println((char) data);
+                    data = input.read();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    input.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        thread1.start();
+        thread2.start();
+    }
+
+    public static void dataInputStream() throws IOException {
+        File fileIn = new File("e:\\test.txt");
+        File fileOut = new File("e:\\out.txt");
+        if (!fileOut.exists()) {
+            fileOut.createNewFile();
+        }
+        FileInputStream fileInputStream = new FileInputStream(fileIn);
+        DataInputStream in = new DataInputStream(fileInputStream);
+        FileOutputStream fileOutputStream = new FileOutputStream(fileOut);
+        DataOutputStream out = new DataOutputStream(fileOutputStream);
+        BufferedReader d = new BufferedReader(new InputStreamReader(in));
+        String count;
+        while ((count = d.readLine()) != null) {
+            String u = count.toUpperCase();
+            System.out.println(u);
+            out.writeBytes(u + ",");
+        }
+        d.close();
+        out.close();
     }
 }
